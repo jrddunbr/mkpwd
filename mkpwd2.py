@@ -22,8 +22,11 @@ if len(sys.argv) == 2:
     except:
         print("{} is not a number".format(sys.argv[1]), file=sys.stderr)
 else:
-    size = input("Enter size for random security key: ")
-    if size > 0:
-        print(generateSecureKey(int(size)))
-    else:
-        print("Please enter a number greater than 0")
+    try:
+        size = int(input("Enter size for random security key: "))
+        if size > 0:
+            print(generateSecureKey(int(size)))
+        else:
+            print("Please enter a number greater than 0")
+    except:
+        print("Please enter a number")
