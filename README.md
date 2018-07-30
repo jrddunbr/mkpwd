@@ -26,12 +26,14 @@ mknum utility.
 
 The ```mkpwd``` and ```mknum``` utilities behave exactly the same, except that
 one returns a set of digits and uppercase characters of a specified size, and
-the other returns a set of only digits of a specified size.
+the other returns a set of only digits of a specified size. ```mkpwd2``` adds
+special characters to ```mkpwd```.
 
 ## User Interface Mode
 
 ```bash
 ./mkpwd.py
+./mkpwd2.py
 ./mknum.py
 ```
 
@@ -43,6 +45,7 @@ print a string to stdout and exit.
 
 ```bash
 ./mkpwd.py $SIZE
+./mkpwd2.py $SIZE
 ./mknum.py $SIZE
 ```
 
